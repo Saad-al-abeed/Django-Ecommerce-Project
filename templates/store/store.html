@@ -5,7 +5,11 @@
 <!-- ========================= SECTION PAGETOP ========================= -->
 <section class="section-pagetop bg">
 <div class="container">
+	{% if 'search' in request.path %}
+	<h2 class="title-page">Search Result</h2>
+	{% else %}
 	<h2 class="title-page">Our Store</h2>
+	{% endif %}
 
 </div> <!-- container //  -->
 </section>
@@ -120,7 +124,6 @@
 <header class="border-bottom mb-4 pb-3">
 		<div class="form-inline">
 			<span class="mr-md-auto">{{ count }} items found </span>
-
 		</div>
 </header><!-- sect-heading -->
 
